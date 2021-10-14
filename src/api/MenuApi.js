@@ -7,6 +7,10 @@ class MenuApi{
         return axios.get(this.URL)
                     .then((response)=>response.data);
     }
+    menuCatagory(catagory){
+        return axios.get(this.URL+`${catagory}/`)
+                    .then((response)=>response.data);
+    }
 }
 
 export default new MenuApi();

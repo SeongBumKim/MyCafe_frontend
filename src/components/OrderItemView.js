@@ -14,6 +14,7 @@ class OrderItemView extends Component {
             </Item>
         );
     }
+    
 }
 
 export default OrderItemView;
