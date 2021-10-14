@@ -7,8 +7,14 @@ class MenuApi{
         return axios.get(this.URL)
                     .then((response)=>response.data);
     }
+
     menuCatagory(catagory){
         return axios.get(this.URL+`${catagory}/`)
+    }
+
+    menuDetail(id){
+        // console.log(id,"----------")
+        return axios.get(this.URL+`${id}/`)
                     .then((response)=>response.data);
     }
 }

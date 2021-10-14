@@ -1,5 +1,6 @@
 import React from 'react';
 import { Divider, Grid, Segment } from 'semantic-ui-react'
+import BasketItemContainer from '../container/BasketItemContainer';
 import GiftInputContainer from '../container/GiftInputContainer';
 import MenuListContainer from '../container/MenuListContainer';
 
@@ -14,6 +15,7 @@ function Home() {
         <Grid.Column>
             <h1>주문화면</h1>
             <GiftInputContainer/>
+            <BasketItemContainer />
         </Grid.Column>
         </Grid>
         <Divider vertical></Divider>
