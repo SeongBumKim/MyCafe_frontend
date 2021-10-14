@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import { Button, Item, ItemContent } from 'semantic-ui-react'
-import MenuStore from '../store/MenuStore';
-import { observer } from 'mobx-react';
 
-class OrderItemView extends Component {
-    menuStore = MenuStore;
-
+class BasketItemView extends Component {
     render() {
         const {menu} = this.props;
-        const {selectMenu} = this.menuStore
-
         return (
             <Item>
                 <Item.Image size='tiny' src={menu.imgUrl} />
                 <ItemContent>
                     <Item.Header>{menu.name}</Item.Header>
                     <Item.Meta>{menu.price}</Item.Meta>
-                    <Button floated='right'
-                    key={menu.id} 
-                    menu = {menu}
-                    onClick={()=>selectMenu(menu.id)}>
-                        +
+                    <Button floated='right'>
+                        -
                     </Button>
                 </ItemContent>
             </Item>
@@ -28,4 +19,4 @@ class OrderItemView extends Component {
     }
 }
 
-export default observer(OrderItemView);
+export default BasketItemView;
