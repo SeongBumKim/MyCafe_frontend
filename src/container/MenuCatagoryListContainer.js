@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
 import { Item, Input, Menu, Segment } from 'semantic-ui-react';
-import OrderItemView from '../components/OrderItemView';
 import MenuStore from '../store/MenuStore';
 import { observer } from 'mobx-react';
+import MenuItemView from '../view/MenuItemView';
 
 
-class MenuListContainer extends Component {
+class MenuCatagoryListContainer extends Component {
     menustore = MenuStore;
 
     componentDidMount(){
-        this.menustore.selectAll();
+        this.menustore.selectCatagory('Coffee');
     }
 
     state = { activeItem: 'Coffee' }
 
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+    handleItemClick = (e, { name }) => {
+        this.setState({ activeItem: name });
+        this.menustore.selectCatagory(name);
+    }
+    
 
     render() {
         const {menus} = this.menustore;
         const menuList = menus.map(menu => {
             return(
-                <OrderItemView key={menu.id} menu={menu} />
+                // <OrderItemView key={menu.id} menu={menu} />
+                <MenuItemView key={menu.id} menu={menu} />
             )
         })
         
@@ -29,7 +34,7 @@ class MenuListContainer extends Component {
 
         return (
             <Item.Group>
-                {menuList}
+                
                 <div>
                     <Menu attached='top' tabular>
                     <Menu.Item
@@ -64,7 +69,7 @@ class MenuListContainer extends Component {
                     </Menu>
 
                     <Segment attached='bottom'>
-                    {/* <img src='https://react.semantic-ui.com/images/wireframe/paragraph.png' alt="profile"/> */}
+                        {menuList}
                     </Segment>
                 </div>
             </Item.Group>
@@ -73,4 +78,4 @@ class MenuListContainer extends Component {
     }
 }
 
-export default observer(MenuListContainer);
+export default observer(MenuCatagoryListContainer);

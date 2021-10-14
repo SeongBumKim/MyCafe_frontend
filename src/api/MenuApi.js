@@ -8,6 +8,10 @@ class MenuApi{
                     .then((response)=>response.data);
     }
 
+    menuCatagory(catagory){
+        return axios.get(this.URL+`${catagory}/`)
+    }
+
     menuDetail(id){
         // console.log(id,"----------")
         return axios.get(this.URL+`${id}/`)

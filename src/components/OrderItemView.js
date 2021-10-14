@@ -26,6 +26,7 @@ class OrderItemView extends Component {
             </Item>
         );
     }
+    
 }
 
 export default observer(OrderItemView);
