@@ -3,6 +3,7 @@ import { Item, Input, Menu, Segment } from 'semantic-ui-react';
 import OrderItemView from '../components/OrderItemView';
 import MenuStore from '../store/MenuStore';
 import { observer } from 'mobx-react';
+import MenuItemView from '../components/MenuItemView';
 
 
 class MenuListContainer extends Component {
