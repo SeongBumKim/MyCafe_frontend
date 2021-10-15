@@ -65,7 +65,7 @@ class MenuListContainer extends Component {
                     </Menu>
 
                     <Segment attached='bottom'>
-                    {/* <img src='https://react.semantic-ui.com/images/wireframe/paragraph.png' alt="profile"/> */}
+                    {/* < img src='https://react.semantic-ui.com/images/wireframe/paragraph.png' alt="profile"/> */}
                         {menuList}
                     </Segment>
                 </div>
