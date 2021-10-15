@@ -8,12 +8,13 @@ class MenuApi{
                     .then((response)=>response.data);
     }
 
-    menuCatagory(catagory){
-        return axios.get(this.URL+`${catagory}/`)
+    menuCategory(category){
+        return axios.get(this.URL+`${category}/`)
+                    .then((response)=>response.data);
     }
 
     menuDetail(id){
-        // console.log(id,"----------")
+        console.log(id,"----------")
         return axios.get(this.URL+`${id}/`)
                     .then((response)=>response.data);
     }

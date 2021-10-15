@@ -23,8 +23,9 @@ class Menu{
 
     async selectMenu(id) {
         try{
+            console.log(id, "==selectMenu====");
             const result = await MenuApi.menuDetail(id);
-            // console.log(result,"==========")
+            console.log(result,"======MenuApi result ====")
             runInAction(()=> {this.myMenu.push(result)})
         }catch(error){
             this.message = error.message;
@@ -55,7 +56,8 @@ class Menu{
 
     async selectAll(){
         try{
-            const result = await MenuApi.menuList();    
+            const result = await MenuApi.menuList();   
+            
             runInAction(()=>this.menus=result);
         }
         catch(error){
@@ -64,6 +66,17 @@ class Menu{
         }        
     }
 
+    async selectCategory(category){
+        try{
+            const result = await MenuApi.menuCategory(category);  
+            
+            runInAction(()=>this.menus=result);
+        }
+        catch(error){
+            console.log(error);
+            runInAction(()=>this.message=error.message);
+        }        
+    }
     async selectAllOrder(){
         try{
             const result = await MenuApi.orderList();    
