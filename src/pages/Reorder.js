@@ -1,10 +1,9 @@
 import React from 'react';
+import OrderListContainer from '../container/OrderListContainer';
 
 function Reorder(props) {
     return (
-        <div>
-            <h1>Reorder Page</h1>
-        </div>
+        <OrderListContainer />
     );
 }
 

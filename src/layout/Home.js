@@ -4,6 +4,8 @@ import BasketItemContainer from '../container/BasketItemContainer';
 import GiftInputContainer from '../container/GiftInputContainer';
 // import MenuListContainer from '../container/MenuListContainer';
 import MenuCategoryListContainer from '../container/MenuCategoryListContainer';
+// import MenuListContainer from '../container/MenuListContainer';
+import PriceContainer from '../container/PriceContainer';
 
 function Home() {
     return (
@@ -18,6 +20,7 @@ function Home() {
             <h1>주문화면</h1>
             <GiftInputContainer/>
             <BasketItemContainer />
+            <PriceContainer />
         </Grid.Column>
         </Grid>
         <Divider vertical></Divider>
