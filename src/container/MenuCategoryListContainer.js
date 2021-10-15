@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import { Item, Input, Menu, Segment } from 'semantic-ui-react';
 import MenuStore from '../store/MenuStore';
 import { observer } from 'mobx-react';
-import MenuItemView from '../view/MenuItemView';
+// import MenuItemView from '../view/MenuItemView';
+import OrderItemView from '../components/OrderItemView';
 
-
-class MenuCatagoryListContainer extends Component {
+class MenuCategoryListContainer extends Component {
     menustore = MenuStore;
 
     componentDidMount(){
-        this.menustore.selectCatagory('Coffee');
+        this.menustore.selectCategory('Coffee');
     }
 
     state = { activeItem: 'Coffee' }
 
     handleItemClick = (e, { name }) => {
         this.setState({ activeItem: name });
-        this.menustore.selectCatagory(name);
+        this.menustore.selectCategory(name);
     }
     
 
@@ -24,8 +24,8 @@ class MenuCatagoryListContainer extends Component {
         const {menus} = this.menustore;
         const menuList = menus.map(menu => {
             return(
-                // <OrderItemView key={menu.id} menu={menu} />
-                <MenuItemView key={menu.id} menu={menu} />
+                // <MenuItemView key={menu.id} menu={menu} />
+                <OrderItemView key={menu.id} menu={menu} />
             )
         })
         
@@ -53,8 +53,8 @@ class MenuCatagoryListContainer extends Component {
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
-                        name='Desert'
-                        active={activeItem === 'Desert'}
+                        name='Dessert'
+                        active={activeItem === 'Dessert'}
                         onClick={this.handleItemClick}
                     />
                     <Menu.Menu position='right'>
@@ -78,4 +78,4 @@ class MenuCatagoryListContainer extends Component {
     }
 }
 
-export default observer(MenuCatagoryListContainer);
+export default observer(MenuCategoryListContainer);

@@ -3,7 +3,7 @@ import { Item, Input, Menu, Segment } from 'semantic-ui-react';
 import OrderItemView from '../components/OrderItemView';
 import MenuStore from '../store/MenuStore';
 import { observer } from 'mobx-react';
-import MenuItemView from '../components/MenuItemView';
+// import MenuItemView from '../components/MenuItemView';
 
 
 class MenuListContainer extends Component {
@@ -30,7 +30,7 @@ class MenuListContainer extends Component {
 
         return (
             <Item.Group>
-                {menuList}
+               
                 <div>
                     <Menu attached='top' tabular>
                     <Menu.Item
@@ -66,6 +66,7 @@ class MenuListContainer extends Component {
 
                     <Segment attached='bottom'>
                     {/* <img src='https://react.semantic-ui.com/images/wireframe/paragraph.png' alt="profile"/> */}
+                        {menuList}
                     </Segment>
                 </div>
             </Item.Group>

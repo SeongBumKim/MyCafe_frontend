@@ -7,10 +7,10 @@ class MenuItemView extends Component {
     return (
         <Item>
             <Item.Image src={menu.imgUrl} />
-            <ItemContent>
-                <Item.Header>{menu.name}</Item.Header>
-                <Item.Meta>{menu.price}</Item.Meta>
-            </ItemContent>
+                <ItemContent>
+                    <Item.Header>{menu.name}</Item.Header>
+                    <Item.Meta>{menu.price}</Item.Meta>   
+                </ItemContent>
         </Item>
     );
 }

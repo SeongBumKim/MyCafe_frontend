@@ -11,12 +11,9 @@ class BasketItemContainer extends Component {
         const {myMenu} = this.menustore;
 
         const myMenuList = myMenu.map(menu => {
-            return(
-                <BasketItemView key={menu.id} menu={menu} />
-            )            
+            return <BasketItemView key={menu.id} menu={menu} />       
         });
-        // console.log(myMenuList,"----------");
-
+        
         return (
             <Item.Group>
                 {myMenuList}
