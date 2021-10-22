@@ -79,6 +79,22 @@ class Menu{
             runInAction(()=>this.message=error.message);
         }        
     }
+
+    async selectLogin(username, password){
+        try{
+            const result = await MenuApi.loginCheck(username, password );  
+            
+            runInAction(()=>this.user.username=result);
+            window.localStorage.setItem('username',this.user.username);
+        }
+        catch(error){
+            console.log(error);
+            runInAction(()=>this.message=error.message);
+        } 
+
+
+}
+
     async selectAllOrder(){
         try{
             const result = await MenuApi.orderList();    

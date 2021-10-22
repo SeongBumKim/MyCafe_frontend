@@ -10,8 +10,10 @@ function NavBar(props) {
  
     setActiveItem({ activeItem: name });
         props.history.push(name);
-    }   
-
+  }
+  
+  
+  const username = sessionStorage.getItem('username');
    return (
       <div>
         <Menu pointing secondary>
@@ -26,11 +28,20 @@ function NavBar(props) {
             onClick={handleItemClick}
           />
           <Menu.Menu position='right'>
+           { 
+             (username !== undefined && username !=="") ?
             <Menu.Item
               name='login'
               active={activeItem === 'login'}
               onClick={handleItemClick}
             />
+            :
+            <Menu.Item
+              name='logout'
+              active={activeItem === 'logout'}
+              onClick={handleItemClick}
+            />
+           }
           </Menu.Menu>
          </Menu>    
       </div>

@@ -48,11 +48,6 @@ class MenuCategoryListContainer extends Component {
                         onClick={this.handleItemClick}
                     />
                     <Menu.Item
-                        name='Beverage'
-                        active={activeItem === 'Beverage'}
-                        onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
                         name='Dessert'
                         active={activeItem === 'Dessert'}
                         onClick={this.handleItemClick}
