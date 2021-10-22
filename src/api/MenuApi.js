@@ -9,13 +9,32 @@ class MenuApi{
     }
 
     menuCategory(category){
-        return axios.get(this.URL+`${category}/`)
+        return axios.get(this.URL+`category/${category}/`)
                     .then((response)=>response.data);
     }
 
     menuDetail(id){
-        console.log(id,"----------")
-        return axios.get(this.URL+`${id}/`)
+        // console.log(id,"----------")
+        return axios.get(this.URL+`detail/${id}/`)
+                    .then((response)=>response.data);
+    }
+
+    orderList(){
+        return axios.get(this.URL+'order/')
+                    .then((response)=>response.data);
+    }
+
+    orderedMenuList(id){
+        return axios.get(this.URL+`order/${id}/`)
+                    .then((response)=>response.data);
+    }
+
+    orderCreate(name, totalPrice){
+        return axios.post(this.URL+'create/',
+                    {name:`${name}`,
+                    totalPrice:`${totalPrice}`,
+                    // orderDate:`${orderDate}`
+                    })
                     .then((response)=>response.data);
     }
 

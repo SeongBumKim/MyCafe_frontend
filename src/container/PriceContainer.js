@@ -4,14 +4,28 @@ import { observer } from 'mobx-react';
 import MenuStore from '../store/MenuStore';
 
 class PriceContainer extends Component {
+    menuStore = MenuStore;
+
+    componentDidMount(){
+        this.menuStore.selectAll();
+    }
+
     render() {
-        const {myMenu} = MenuStore;
+        // const{order, orderAdd} = this.menuStore;
+        let {myMenu, orderAdd} = this.menuStore;
         var productPrice = 0;
         var giftCouponPrice = 0;    
+
         for(let i = 0; i < myMenu.length; i++){
             productPrice += parseInt(myMenu[i].price, 10);
         }
         const totalPrice = productPrice - giftCouponPrice;
+       
+        // this.order.name = myMenu[0].name + '외' + myMenu.length + '건';
+        // this.order.totalPrice = totalPrice;
+        // this.order.orderDate = Date.now();
+        
+        
         return (
             <Message>
                 <Statistic.Group horizontal>
@@ -28,7 +42,8 @@ class PriceContainer extends Component {
                         <Statistic.Label> = Total </Statistic.Label>
                     </Statistic>
                 </Statistic.Group>
-                <Button basic color='blue'> 주문하기 </Button> 
+                <Button basic color='blue'
+                        onClick = {()=>orderAdd(totalPrice)}> 주문하기 </Button> 
             </Message>
         );
     }

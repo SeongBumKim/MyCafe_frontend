@@ -14,9 +14,18 @@ class Menu{
     menus = []; //메뉴리스트
     myMenu = []; // 메뉴리스트에서 주문할 메뉴 선택
     giftMenu = []; //기프트카드의 메뉴
+    order = {
+        id : "",
+        name : "",
+        totalPrice: 0,
+        orderDate : "",
+    }
     orders = []; //주문내역리스트
-    user={}
-    users=[]
+    orderedMenu ={
+        menuId : "",
+        orderId : ""
+    }
+    
     
 
     constructor() {
@@ -88,7 +97,41 @@ class Menu{
             // console.log(error);
             runInAction(()=>this.message=error.message);
         }        
-    };
+    }
+
+    async selectOrder(id) {
+        // try{
+        //     const result = await MenuApi.orderedMenuList(id);
+        //     runInAction(()=> {this.myMenu = result})
+        // }catch(error){
+        //     this.message = error.message;
+        // }
+    }
+
+    async orderAdd(totalPrice){
+        try{
+            runInAction(()=>{
+                this.order.name = this.myMenu[0].name + '외' + this.myMenu.length + '건';
+                this.order.totalPrice = totalPrice;
+                // this.order.orderDate = Date();
+            })
+            await MenuApi.orderCreate(
+                this.order.name,
+                this.order.totalPrice,
+                // this.order.orderDate
+            );
+        this.selectAllOrder();
+        }catch(error){
+            runInAction(this.message = error.message);
+        }
+        console.log(this.order,"order==========")
+        // runInAction(this.myMenu = []);
+    }
+
+    hanlderSetOrder = (name, value) => {
+        this.order = {...this.order, [name]:value} //현재값에서 title만 ...:전개연산자 //기존 properties에 있는 내용들은 두고 name:value만 수정, name은 id, title, date 아무거나 올수있도록 일반화: [name]
+    }
 
 }
+
 export default new Menu();

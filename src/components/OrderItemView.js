@@ -13,20 +13,19 @@ class OrderItemView extends Component {
         return (
             <Item>
                 <Item.Image size='tiny' src={menu.imgUrl} />
+                <Button floated='right'
+                key={menu.id} 
+                menu = {menu}
+                onClick={()=>selectMenu(menu.id)}>
+                    +
+                </Button>    
                 <ItemContent>
                     <Item.Header>{menu.name}</Item.Header>
-                    <Item.Meta>{menu.price}</Item.Meta>
-                    <Button floated='right'
-                    key={menu.id} 
-                    menu = {menu}
-                    onClick={()=>selectMenu(menu.id)}>
-                        +
-                    </Button>
-                </ItemContent>
+                    <Item.Meta>{menu.price} 원</Item.Meta>  
+                </ItemContent>                
             </Item>
         );
-    }
-    
+    } 
 }
 
 export default observer(OrderItemView);
