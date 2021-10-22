@@ -13,7 +13,6 @@ function Home() {
         <Grid columns={2} relaxed='very'>
         <Grid.Column>
             <h1>메뉴화면</h1>
-            {/* <MenuListContainer /> */}
             <MenuCategoryListContainer />
         </Grid.Column>
         <Grid.Column>

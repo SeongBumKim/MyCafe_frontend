@@ -18,6 +18,13 @@ class MenuApi{
         return axios.get(this.URL+`${id}/`)
                     .then((response)=>response.data);
     }
+
+    loginCheck(username, password ) {
+        return axios.post(this.URL+`login/`,{'username':`${username}`,'password':`${password}`})
+                    .then((response)=>response.data);
+        
+    }
+    
 }
 
 export default new MenuApi();
