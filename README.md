@@ -27,13 +27,13 @@
 
 ## 팀 구성 및 역할
 
-![캡처](C:\mycafe_project\myCafe\readme_img\팀역할.PNG)
+![캡처](C:\mycafe_project\myCafe\frontend\readme_img\팀역할.PNG)
 
 ---
 
 ## 수행 절차 및 방법
 
-![수행절차](C:\mycafe_project\myCafe\readme_img\수행절차.PNG)
+![수행절차](C:\mycafe_project\myCafe\frontend\readme_img\수행절차.PNG)
 
 ---
 
@@ -41,15 +41,15 @@
 
 #### 스토리보드
 
-![스토리보드1](C:\mycafe_project\myCafe\readme_img\스토리보드1.PNG)
+![스토리보드1](C:\mycafe_project\myCafe\frontend\readme_img\스토리보드1.PNG)
 
 #### DB구성
 
-![DB구성](C:\mycafe_project\myCafe\readme_img\DB구성.PNG)
+![DB구성](C:\mycafe_project\myCafe\frontend\readme_img\DB구성.PNG)
 
 #### URLconf 설계
 
-![URL](C:\mycafe_project\myCafe\readme_img\URL.PNG)
+![URL](C:\mycafe_project\myCafe\frontend\readme_img\URL.PNG)
 
 ---
 
@@ -57,31 +57,31 @@
 
 로그인 화면
 
-![로그인](C:\mycafe_project\myCafe\readme_img\로그인.PNG)
+![로그인](C:\mycafe_project\myCafe\frontend\readme_img\로그인.PNG)
 
 
 
 로그인을 하면 주문화면으로 이동하게 됩니다.
 
-![그룹검색](C:\mycafe_project\myCafe\readme_img\주문화면.PNG)
+![그룹검색](C:\mycafe_project\myCafe\frontend\readme_img\주문화면.PNG)
 
 
 
 선택된 메뉴에 따라 주문목록 화면에 표시됩니다.
 
-![그룹검색](C:\mycafe_project\myCafe\readme_img\주문화면1.PNG)
+![그룹검색](C:\mycafe_project\myCafe\frontend\readme_img\주문화면1.PNG)
 
 
 
 주문목록에서 원하지 않는 메뉴는 (-) 버튼을 통해 제외 할 수 있도록 설정하였습니다.
 
-![그룹검색](C:\mycafe_project\myCafe\readme_img\주문화면2.PNG)
+![그룹검색](C:\mycafe_project\myCafe\frontend\readme_img\주문화면2.PNG)
 
 
 
 주문하기 버튼을 클릭하면 Reorder page에 주문내역이 추가되도록 하였습니다. 
 
-![그룹검색](C:\mycafe_project\myCafe\readme_img\재주문.PNG)
+![그룹검색](C:\mycafe_project\myCafe\frontend\readme_img\재주문.PNG)
 
 
 
