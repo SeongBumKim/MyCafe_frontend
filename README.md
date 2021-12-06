@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# MyCafe PROJECT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+### 순서
 
-In the project directory, you can run:
+- [프로젝트 배경](#프로젝트-배경)
+- [팀 구성 및 역할](#팀-구성-및-역할)
+- [수행 절차 및 방법](#수행-절차-및-방법)
+- [설계](#설계)
+- [수행 결과 및 시연](#수행-결과-및-시연)
+- [개선 방안](#개선-방안)
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 프로젝트 배경
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+이 프로젝트는 카페의 주문시스템 활용을 위한 위한 웹 애플리케이션 제작입니다. 카페 내 부족한 키오스크 개수로 발생하는 대기시간을 줄이기 위해 개인 디바이스로 주문할 수 있도록 하고, 키오스크와 유사한 기능을 제공함으로 자영업자들의 키오스크 설치 비용 발생 문제를 해결할 수 있습니다. 
 
-### `yarn test`
+#### 개발환경
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Back-end: Django Rest Framework
+- DB: MariaDB
+- Front-end: React
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 팀 구성 및 역할
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![캡처](../readme_img/팀역할.PNG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## 수행 절차 및 방법
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![수행절차](../readme_img/수행절차.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 설계
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 스토리보드
 
-## Learn More
+![스토리보드1](../readme_img/스토리보드1.PNG)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### DB구성
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![DB구성](../readme_img/DB구성.PNG)
 
-### Code Splitting
+#### URLconf 설계
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![URL](../readme_img/URL.PNG)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 수행결과 및 시현
 
-### Making a Progressive Web App
+로그인 화면
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![로그인](../readme_img/로그인.PNG)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+로그인을 하면 주문화면으로 이동하게 됩니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![그룹검색](C:../readme_img/주문화면.PNG)
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+선택된 메뉴에 따라 주문목록 화면에 표시됩니다.
+
+![그룹검색](C:../readme_img/주문화면1.PNG)
+
+
+
+주문목록에서 원하지 않는 메뉴는 (-) 버튼을 통해 제외 할 수 있도록 설정하였습니다.
+
+![그룹검색](C:../readme_img/주문화면2.PNG)
+
+
+
+주문하기 버튼을 클릭하면 Reorder page에 주문내역이 추가되도록 하였습니다. 
+
+![그룹검색](C:../readme_img/재주문.PNG)
+
+
+
+
+
+## 개선방안
+
+1. 로그인/회원가입 기능
+2. 기프트콘 가져오기 기능
+3. 주문하기 결제시스템 연동
