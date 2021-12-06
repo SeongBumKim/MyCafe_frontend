@@ -74,7 +74,8 @@ class Menu{
         catch(error){
             // console.log(error);
             runInAction(()=>this.message=error.message);
-        }        
+        }
+        console.log(this.menus,"MenuList========")        
     }
 
     async selectCategory(category){
